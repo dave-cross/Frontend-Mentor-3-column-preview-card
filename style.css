@@ -75,3 +75,31 @@ h2 {
 svg {
   display: block;
 }
+
+.flow > * + * {
+  margin-block-start: var(--flow-space, var(--space-300));
+}
+
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--switcher-space, 1em);
+  align-items: var(--switcher-vertical-alignment, flex-start);
+}
+
+.switcher > * {
+  flex-grow: 1;
+  flex-basis: calc(
+    (var(--switcher-target-container-width, 40rem) - 100%) * 999
+  );
+}
+
+.challenge-wrapper {
+  --_max-width: var(--max-width, 320px);
+
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: var(--space-300)
+    max(var(--space-300), calc(50% - var(--_max-width) / 2));
+}
