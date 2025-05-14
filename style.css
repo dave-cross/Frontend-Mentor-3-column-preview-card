@@ -103,3 +103,57 @@ svg {
   padding: var(--space-300)
     max(var(--space-300), calc(50% - var(--_max-width) / 2));
 }
+
+.cards {
+  --switcher-space: 0;
+  --switcher-vertical-alignment: stretch;
+  --switcher-target-container-width: 47rem;
+  min-height: var(--min-height);
+  border-radius: var(--radius-default);
+  overflow: hidden;
+}
+
+.card {
+  --flow-space: var(--space-450);
+  --_card-bg-color: var(--card-bg-color, grey);
+  background-color: var(--_card-bg-color);
+  color: var(--white);
+  padding: var(--space-600);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.card svg {
+  circle {
+    fill: var(--color-content-icon-circle);
+  }
+
+  path {
+    --_path-fill-color: var(--path-fill-color, tomato);
+    fill: var(--_path-fill-color);
+  }
+}
+
+.card h2 ~ * {
+  --flow-space: var(--space-300);
+}
+
+.card a {
+  text-decoration: none;
+  display: block;
+  color: var(--_card-bg-color);
+  background-color: var(--white);
+  border-radius: calc(Infinity * 1px);
+  border: 2px solid var(--white);
+  padding: var(--space-125) var(--space-400);
+
+  &:hover {
+    background-color: transparent;
+    color: var(--white);
+  }
+}
+
+.card :has(+ a) {
+  margin-block-end: auto;
+}
