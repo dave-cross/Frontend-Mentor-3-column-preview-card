@@ -1,0 +1,77 @@
+:root {
+  /* Tier 1 */
+  --black: hsl(0, 0%, 0%);
+  --white: hsl(0, 0%, 95%);
+  --orange-200: hsl(42, 100%, 73%);
+  --orange-600: hsl(31, 76%, 52%);
+  --blue-200: hsl(184, 67%, 45%);
+  --blue-600: hsl(184, 100%, 22%);
+  --green-200: hsl(170, 76%, 41%);
+  --green-600: hsl(179, 100%, 13%);
+
+  --space-125: 10px;
+  --space-150: 12px;
+  --space-300: 24px;
+  --space-400: 32px;
+  --space-450: 36px;
+  --space-600: 48px;
+  --space-1100: 88px;
+
+  --font-family-bigshoulder: "Big Shoulders", sans-serif;
+  --font-family-lexand: "Lexend Deca", sans-serif;
+
+  --font-weight-400: 400;
+
+  --font-size-40: 40px;
+  --font-size-15: 15px;
+
+  --line-height-00: normal;
+  --line-height-16: 1.666666;
+
+  --radius-8: 8px;
+
+  /* Tier 2 */
+
+  --color-background-default: var(--white);
+  --color-background-primary: var(--orange-600);
+  --color-background-secondary: var(--blue-600);
+  --color-background-tertiary: var(--green-600);
+
+  --color-content-default: var(--white);
+  --color-content-icon-primary: var(--orange-200);
+  --color-content-icon-secondary: var(--blue-200);
+  --color-content-icon-tertiary: var(--green-200);
+  --color-content-icon-circle: hsl(from var(--black) h s l / 20.14%);
+
+  --typograghy-card-heading: var(--font-weight-400) var(--font-size-40) /
+    var(--line-height-00) var(--font-family-bigshoulder);
+  --typograghy-card-body: var(--font-weight-400) var(--font-size-15) /
+    var(--line-height-16) var(--font-family-lexand);
+
+  --radius-default: var(--radius-8);
+
+  --max-width: 920px;
+  --min-height: 500px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-background-default);
+  font: var(--typograghy-card-body);
+}
+
+h2 {
+  font: var(--typograghy-card-heading);
+  text-transform: uppercase;
+  /* adjustment for new google font */
+  letter-spacing: 0.4px;
+}
+
+svg {
+  display: block;
+}
