@@ -157,3 +157,16 @@ svg {
 .card :has(+ a) {
   margin-block-end: auto;
 }
+
+.card[data-card-type="primary"] {
+  --card-bg-color: var(--color-background-primary);
+  --path-fill-color: var(--color-content-icon-primary);
+}
+.card[data-card-type="secondary"] {
+  --card-bg-color: var(--color-background-secondary);
+  --path-fill-color: var(--color-content-icon-secondary);
+}
+.card[data-card-type="tertiary"] {
+  --card-bg-color: var(--color-background-tertiary);
+  --path-fill-color: var(--color-content-icon-tertiary);
+}
