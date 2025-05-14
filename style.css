@@ -17,6 +17,10 @@
   --space-600: 48px;
   --space-1100: 88px;
 
+  /* @link https://utopia.fyi/clamp/calculator?a=375,920,88—171|88—129&p=space */
+  --space-88-171: clamp(var(--space-1100), 1.9306rem + 15.2294vw, 10.6875rem);
+  --space-88-129: clamp(var(--space-1100), 3.7368rem + 7.5229vw, 8.0625rem);
+
   --font-family-bigshoulder: "Big Shoulders", sans-serif;
   --font-family-lexand: "Lexend Deca", sans-serif;
 
@@ -100,8 +104,8 @@ svg {
   display: grid;
   place-items: center;
   min-height: 100vh;
-  padding: var(--space-300)
-    max(var(--space-300), calc(50% - var(--_max-width) / 2));
+  padding: var(--space-88-171)
+    max(var(--space-300), calc(50% - var(--_max-width) / 2)) var(--space-88-129);
 }
 
 .cards {
